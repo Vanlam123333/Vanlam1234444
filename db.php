@@ -1,6 +1,7 @@
 <?php
-// Replit dùng SQLite — không cần MySQL, không cần cài gì thêm!
-$db = new SQLite3(__DIR__ . '/mindspark.db');
+// SQLite path - dùng /tmp để Railway có thể ghi
+$dbPath = getenv('RAILWAY_ENVIRONMENT') ? '/tmp/mindspark.db' : __DIR__ . '/mindspark.db';
+$db = new SQLite3($dbPath);
 
 // Tạo bảng nếu chưa có
 $db->exec("
