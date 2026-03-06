@@ -3,8 +3,6 @@
     "builder": "DOCKERFILE"
   },
   "deploy": {
-    "startCommand": "apache2-foreground",
     "restartPolicyType": "ON_FAILURE"
-  },
-  "$schema": "https://railway.app/railway.schema.json"
+  }
 }
